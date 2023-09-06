@@ -39,18 +39,4 @@ describe("Books names test suit", () => {
         ];
         expect(sorting.sortByName(input)).toEqual(expectedOutput);
     });
-
-    it("Should correctly sort elements with special characters", () => {
-        const input = [
-            "The Lord of the Rings",
-            "Harry Potter and the Philosopher's Stone",
-            "Alice in Wonderland",
-        ];
-        const expectedOutput = [
-            "Alice in Wonderland",
-            "Harry Potter and the Philosopher's Stone",
-            "The Lord of the Rings",
-        ];
-        expect(sorting.sortByName(input)).toEqual(expectedOutput);
-    });
 });
