@@ -1,5 +1,21 @@
-const { Given, When, Then } = require('cucumber');
-const { expect } = require('chai');
+const puppeteer = require("puppeteer");
+const chai = require("chai");
+const expect = chai.expect;
+const { Given, When, Then, Before, After } = require("cucumber");
+const { clickElement, getText } = require("../../lib/commands.js");
+
+Before(async function () {
+    const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
+    const page = await browser.newPage();
+    this.browser = browser;
+    this.page = page;
+});
+
+After(async function () {
+    if (this.browser) {
+        await this.browser.close();
+    }
+});
 
 Given('I am on the client page', async function() {
     this.page = await this.browser.newPage();
