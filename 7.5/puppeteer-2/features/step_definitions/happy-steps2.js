@@ -5,7 +5,7 @@ Given('I am on the booking page VIP', async () => {
     await page.goto('https://qamid.tmweb.ru/client/index.php');
 });
 
-When('I enter the booking details', async () => {
+When('I enter the booking details VIP', async () => {
     await page.click('.page-nav__day');
     await page.type('.movie__title', 'Унесенные ветром');
     await page.type('.movie__data-origin', 'Америка');
