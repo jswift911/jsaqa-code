@@ -1,4 +1,4 @@
-Feature: Ticket Booking
+Feature: Booking a VIP ticket on the client page
   Scenario: Today take ticket VIP successfully
     Given I am on the booking page
     When I enter the booking details VIP
